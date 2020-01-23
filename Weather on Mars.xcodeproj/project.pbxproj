@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7505AE4F23D8387C0006E471 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 7505AE4E23D8387C0006E471 /* SkeletonView */; };
+		7505AE5123D85C850006E471 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7505AE5023D85C850006E471 /* Router.swift */; };
+		753A81B723D702AB00582EA2 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 753A81B623D702AB00582EA2 /* Charts */; };
+		756A047523CBE68800B7B1BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A047423CBE68800B7B1BB /* AppDelegate.swift */; };
+		756A047723CBE68800B7B1BB /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A047623CBE68800B7B1BB /* MainVC.swift */; };
+		756A047C23CBE68A00B7B1BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756A047B23CBE68A00B7B1BB /* Assets.xcassets */; };
+		756A047F23CBE68A00B7B1BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756A047D23CBE68A00B7B1BB /* LaunchScreen.storyboard */; };
+		756A048723CBE74000B7B1BB /* SolAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A048623CBE74000B7B1BB /* SolAPI.swift */; };
+		756A048923CBE98000B7B1BB /* Sol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A048823CBE98000B7B1BB /* Sol.swift */; };
+		75927A1123CF61CA00C4632B /* SolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75927A1023CF61CA00C4632B /* SolCell.swift */; };
+		75927A1523D5A51600C4632B /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75927A1423D5A51600C4632B /* InfoView.swift */; };
+		75927A1723D6847C00C4632B /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75927A1623D6847B00C4632B /* DetailVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7505AE5023D85C850006E471 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		756A047123CBE68800B7B1BB /* Weather on Mars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather on Mars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		756A047423CBE68800B7B1BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		756A047623CBE68800B7B1BB /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		756A047B23CBE68A00B7B1BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		756A047E23CBE68A00B7B1BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		756A048023CBE68A00B7B1BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		756A048623CBE74000B7B1BB /* SolAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolAPI.swift; sourceTree = "<group>"; };
+		756A048823CBE98000B7B1BB /* Sol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sol.swift; sourceTree = "<group>"; };
+		75927A1023CF61CA00C4632B /* SolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolCell.swift; sourceTree = "<group>"; };
+		75927A1423D5A51600C4632B /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		75927A1623D6847B00C4632B /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		756A046E23CBE68800B7B1BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7505AE4F23D8387C0006E471 /* SkeletonView in Frameworks */,
+				753A81B723D702AB00582EA2 /* Charts in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7505AE5423D9CDFC0006E471 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				756A048823CBE98000B7B1BB /* Sol.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7505AE5523D9CE170006E471 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				75927A1423D5A51600C4632B /* InfoView.swift */,
+				75927A1023CF61CA00C4632B /* SolCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7505AE5623D9CE380006E471 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				756A047623CBE68800B7B1BB /* MainVC.swift */,
+				75927A1623D6847B00C4632B /* DetailVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		756A046823CBE68700B7B1BB = {
+			isa = PBXGroup;
+			children = (
+				756A047323CBE68800B7B1BB /* Weather on Mars */,
+			);
+			sourceTree = "<group>";
+		};
+		756A047223CBE68800B7B1BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				756A047123CBE68800B7B1BB /* Weather on Mars.app */,
+			);
+			name = Products;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		756A047323CBE68800B7B1BB /* Weather on Mars */ = {
+			isa = PBXGroup;
+			children = (
+				756A047423CBE68800B7B1BB /* AppDelegate.swift */,
+				7505AE5623D9CE380006E471 /* Controllers */,
+				7505AE5523D9CE170006E471 /* Views */,
+				7505AE5423D9CDFC0006E471 /* Models */,
+				756A048623CBE74000B7B1BB /* SolAPI.swift */,
+				7505AE5023D85C850006E471 /* Router.swift */,
+				756A047D23CBE68A00B7B1BB /* LaunchScreen.storyboard */,
+				756A048023CBE68A00B7B1BB /* Info.plist */,
+				756A047B23CBE68A00B7B1BB /* Assets.xcassets */,
+				756A047223CBE68800B7B1BB /* Products */,
+			);
+			path = "Weather on Mars";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		756A047023CBE68800B7B1BB /* Weather on Mars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 756A048323CBE68A00B7B1BB /* Build configuration list for PBXNativeTarget "Weather on Mars" */;
+			buildPhases = (
+				756A046D23CBE68800B7B1BB /* Sources */,
+				756A046E23CBE68800B7B1BB /* Frameworks */,
+				756A046F23CBE68800B7B1BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Weather on Mars";
+			packageProductDependencies = (
+				753A81B623D702AB00582EA2 /* Charts */,
+				7505AE4E23D8387C0006E471 /* SkeletonView */,
+			);
+			productName = "Weather on Mars";
+			productReference = 756A047123CBE68800B7B1BB /* Weather on Mars.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		756A046923CBE68700B7B1BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Robin Törnqvist";
+				TargetAttributes = {
+					756A047023CBE68800B7B1BB = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = 756A046C23CBE68700B7B1BB /* Build configuration list for PBXProject "Weather on Mars" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 756A046823CBE68700B7B1BB;
+			packageReferences = (
+				753A81B523D702AB00582EA2 /* XCRemoteSwiftPackageReference "Charts" */,
+				7505AE4D23D8387C0006E471 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+			);
+			productRefGroup = 756A047223CBE68800B7B1BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				756A047023CBE68800B7B1BB /* Weather on Mars */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		756A046F23CBE68800B7B1BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				756A047F23CBE68A00B7B1BB /* LaunchScreen.storyboard in Resources */,
+				756A047C23CBE68A00B7B1BB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		756A046D23CBE68800B7B1BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7505AE5123D85C850006E471 /* Router.swift in Sources */,
+				75927A1723D6847C00C4632B /* DetailVC.swift in Sources */,
+				75927A1123CF61CA00C4632B /* SolCell.swift in Sources */,
+				756A047723CBE68800B7B1BB /* MainVC.swift in Sources */,
+				756A047523CBE68800B7B1BB /* AppDelegate.swift in Sources */,
+				756A048923CBE98000B7B1BB /* Sol.swift in Sources */,
+				75927A1523D5A51600C4632B /* InfoView.swift in Sources */,
+				756A048723CBE74000B7B1BB /* SolAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		756A047D23CBE68A00B7B1BB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				756A047E23CBE68A00B7B1BB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		756A048123CBE68A00B7B1BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		756A048223CBE68A00B7B1BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		756A048423CBE68A00B7B1BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TP6Y4GRUL5;
+				INFOPLIST_FILE = "Weather on Mars/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robintornqvist.Weather-on-Mars";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		756A048523CBE68A00B7B1BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TP6Y4GRUL5;
+				INFOPLIST_FILE = "Weather on Mars/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robintornqvist.Weather-on-Mars";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		756A046C23CBE68700B7B1BB /* Build configuration list for PBXProject "Weather on Mars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				756A048123CBE68A00B7B1BB /* Debug */,
+				756A048223CBE68A00B7B1BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		756A048323CBE68A00B7B1BB /* Build configuration list for PBXNativeTarget "Weather on Mars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				756A048423CBE68A00B7B1BB /* Debug */,
+				756A048523CBE68A00B7B1BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7505AE4D23D8387C0006E471 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.2;
+			};
+		};
+		753A81B523D702AB00582EA2 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7505AE4E23D8387C0006E471 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7505AE4D23D8387C0006E471 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
+		753A81B623D702AB00582EA2 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 753A81B523D702AB00582EA2 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 756A046923CBE68700B7B1BB /* Project object */;
+}

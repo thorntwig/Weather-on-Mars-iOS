@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Charts",
+        "repositoryURL": "https://github.com/danielgindi/Charts.git",
+        "state": {
+          "branch": null,
+          "revision": "dbf7fa2891270f88aeafc872ea0beddb344af94b",
+          "version": "3.4.0"
+        }
+      },
+      {
+        "package": "SkeletonView",
+        "repositoryURL": "https://github.com/Juanpe/SkeletonView.git",
+        "state": {
+          "branch": null,
+          "revision": "5384fd34ddb8010cbc84a5faa5e82a9d0bd8af22",
+          "version": "1.8.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
