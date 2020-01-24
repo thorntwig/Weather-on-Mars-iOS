@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class SolListUtility {
+    
+    static func sortByDate(solList: [Sol]) -> [Sol] {
+        return solList.sorted(by: { ($0.firstUTC.compare($1.firstUTC) == .orderedDescending )})
+    }
+}

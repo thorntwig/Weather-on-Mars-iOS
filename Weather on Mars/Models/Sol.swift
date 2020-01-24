@@ -8,7 +8,7 @@
 
 import Foundation
 // MARK: - SolClass
-struct SolClass: Codable {
+struct Sol: Codable {
     let solNumber: String?
     let firstUTC: Date
     let lastUTC: Date?

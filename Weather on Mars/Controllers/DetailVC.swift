@@ -11,7 +11,7 @@ import Charts
 
 class DetailVC: UIViewController {
     
-    var sols: [SolClass]?
+    var sols: [Sol]?
     var indexPathRow: Int?
     var type: InfoView.InfoType?
     
@@ -29,7 +29,7 @@ class DetailVC: UIViewController {
         return lineChartView
     }()
     
-    func setChart(solList: [SolClass]?) {
+    func setChart(solList: [Sol]?) {
         
         guard let solList = solList else { return }
         var dateArray = [Date]()

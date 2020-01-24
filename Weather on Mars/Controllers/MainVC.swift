@@ -12,13 +12,12 @@ import SkeletonView
 class MainVC: UIViewController {
     let tableView = UITableView()
     var safeArea: UILayoutGuide!
-    var solList = [SolClass]()
+    var solList = [Sol]()
     let pressureView = InfoView(frame: CGRect.zero, type: InfoView.InfoType.pressure)
     let windView = InfoView(frame: CGRect.zero, type: InfoView.InfoType.wind)
     var tempLable = UILabel()
     var indexPathRow: Int = 0
-    
-    var solObject: SolClass? {
+    var solObject: Sol? {
         didSet{
             guard let solNumber = self.solObject?.solNumber else { return }
             guard let solSeason = self.solObject?.season else { return }
@@ -194,7 +193,6 @@ class MainVC: UIViewController {
               
     }
     
-
     func setupStackViews() {
         view.addSubview(stackView)
         view.addSubview(detailsLable)
@@ -235,7 +233,7 @@ class MainVC: UIViewController {
 
     }
     
-    func setupLables(SolList: [SolClass]) {
+    func setupLables(SolList: [Sol]) {
         view.addSubview(tempLable)
         view.addSubview(placeLable)
         view.addSubview(detailInfoLable)
@@ -256,7 +254,7 @@ class MainVC: UIViewController {
         dateLable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         dateLable.bottomAnchor.constraint(equalTo: maxLable.bottomAnchor).isActive = true
         
-        let celcius = SolClass.convertToCelsius(fahrenheit: SolList[0].at?.average ?? 0.0)
+        let celcius = Sol.convertToCelsius(fahrenheit: SolList[0].at?.average ?? 0.0)
         setInfoLabels(for: 0, indexPath: 0)
         setInfoLabels(for: 1, indexPath: 0)
         tempLable.text = String(format: "%.f", celcius) + "°"
@@ -279,16 +277,14 @@ class MainVC: UIViewController {
     }
     
     func getData() {
-        let anonymousFunction = { (fetchedSolList: [SolClass]) in
+        let anonymousFunction = { (fetchedSolList: [Sol]) in
             DispatchQueue.main.async {
-                self.solList = fetchedSolList
-                self.refreshControll.endRefreshing()
+                self.solList = SolListUtility.sortByDate(solList: fetchedSolList)
                 self.tableView.reloadData()
+                self.refreshControll.endRefreshing()
                 self.setupLables(SolList: self.solList)
                 self.solObject = self.solList[0]
-                
             }
-            
         }
         SolAPI.shared.fetchSolList(router: Router.getInsightSols, onCompletion: anonymousFunction)
     }
@@ -305,20 +301,20 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath) as! SolCell
         let sol = solList[indexPath.row]
         if let max = sol.at?.max {
-            let celsius = SolClass.convertToCelsius(fahrenheit: max)
+            let celsius = Sol.convertToCelsius(fahrenheit: max)
             let maxString: String = String(format:"%.f", celsius)
             cell.maxLable.text = maxString
         }
 
         if let min = sol.at?.min {
-            let celsius = SolClass.convertToCelsius(fahrenheit: min)
+            let celsius = Sol.convertToCelsius(fahrenheit: min)
             let minString: String = String(format:"%.f", celsius)
             cell.minLable.text = minString
         }
 
 
         if let av = sol.at?.average {
-            let celsius = SolClass.convertToCelsius(fahrenheit: av)
+            let celsius = Sol.convertToCelsius(fahrenheit: av)
             let avString: String = String(format:"%.f", celsius)
             cell.averageLable.text = avString
         }
@@ -340,7 +336,7 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.solObject = solList[indexPath.row]
         if let av = solList[indexPath.row].at?.average {
-            let celsius = SolClass.convertToCelsius(fahrenheit: av)
+            let celsius = Sol.convertToCelsius(fahrenheit: av)
             let avString: String = String(format:"%.f", celsius)
             tempLable.text = "\(avString)" + "°"
             indexPathRow = indexPath.row

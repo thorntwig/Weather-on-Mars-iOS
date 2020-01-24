@@ -11,7 +11,7 @@ import UIKit
 class InfoView: UIView {
     var typeSwitcher: InfoType
     var measureLable = UILabel()
-    var solClass: SolClass?
+    var solClass: Sol?
     
     
     

@@ -23,28 +23,9 @@ final class SolAPI {
         guard let url = components.url else { return }
         URLSession.shared.dataTask(with: url) { data, reponse, error in
             if let data = data {
-                do {
-                    guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return }
-                       
-                    guard let solKeys = json["sol_keys"] as? [String] else { return }
-                        
-                    for key in solKeys {
-                        if var solJson = json[key] as? [String : Any] {
-                            solJson["solNumber"] = key
-                            let jsonData = try! JSONSerialization.data(withJSONObject: solJson)
-                            let decoder = JSONDecoder()
-                            decoder.dateDecodingStrategy = .iso8601
-                            let solObject = try! decoder.decode(Sol.self, from: jsonData)
-                            solList.append(solObject)
-                        }
-                    }
-                    
-                } catch let error as NSError {
-                    print("Failed to load: \(error)")
-                }
+                solList = APIResponseMapper.dataMapper(from: data)
             }
-            onCompletion(solList.sorted(by: { ($0.firstUTC.compare($1.firstUTC) == .orderedDescending
-                )}))
+            onCompletion(solList)
         }.resume()
     }
 }
