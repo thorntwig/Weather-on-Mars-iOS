@@ -29,7 +29,6 @@ class SolCell: UITableViewCell {
     func setupView() {
         safeArea = layoutMarginsGuide
         setupTextView()
-        
     }
     
     func setupTextView() {
@@ -55,7 +54,6 @@ class SolCell: UITableViewCell {
         minLable.trailingAnchor.constraint(equalTo: averageLable.leadingAnchor, constant: -5).isActive = true
         minLable.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         minLable.textColor = .blue
-        
         
     }
 }

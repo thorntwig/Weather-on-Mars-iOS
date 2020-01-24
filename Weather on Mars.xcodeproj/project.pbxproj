@@ -11,6 +11,7 @@
 		7505AE5123D85C850006E471 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7505AE5023D85C850006E471 /* Router.swift */; };
 		7505AE5A23DA00200006E471 /* SolListUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7505AE5923DA00200006E471 /* SolListUtility.swift */; };
 		7505AE5E23DA02620006E471 /* APIResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7505AE5D23DA02620006E471 /* APIResponseMapper.swift */; };
+		7505AE6223DB24D60006E471 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7505AE6123DB24D60006E471 /* MainView.swift */; };
 		753A81B723D702AB00582EA2 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 753A81B623D702AB00582EA2 /* Charts */; };
 		756A047523CBE68800B7B1BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A047423CBE68800B7B1BB /* AppDelegate.swift */; };
 		756A047723CBE68800B7B1BB /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A047623CBE68800B7B1BB /* MainVC.swift */; };
@@ -27,6 +28,7 @@
 		7505AE5023D85C850006E471 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		7505AE5923DA00200006E471 /* SolListUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolListUtility.swift; sourceTree = "<group>"; };
 		7505AE5D23DA02620006E471 /* APIResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseMapper.swift; sourceTree = "<group>"; };
+		7505AE6123DB24D60006E471 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		756A047123CBE68800B7B1BB /* Weather on Mars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather on Mars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		756A047423CBE68800B7B1BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		756A047623CBE68800B7B1BB /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -64,8 +66,9 @@
 		7505AE5523D9CE170006E471 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				75927A1423D5A51600C4632B /* InfoView.swift */,
 				75927A1023CF61CA00C4632B /* SolCell.swift */,
+				75927A1423D5A51600C4632B /* InfoView.swift */,
+				7505AE6123DB24D60006E471 /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				756A047723CBE68800B7B1BB /* MainVC.swift in Sources */,
 				756A047523CBE68800B7B1BB /* AppDelegate.swift in Sources */,
 				7505AE5A23DA00200006E471 /* SolListUtility.swift in Sources */,
+				7505AE6223DB24D60006E471 /* MainView.swift in Sources */,
 				756A048923CBE98000B7B1BB /* Sol.swift in Sources */,
 				75927A1523D5A51600C4632B /* InfoView.swift in Sources */,
 				756A048723CBE74000B7B1BB /* SolAPI.swift in Sources */,
