@@ -12,8 +12,8 @@ final class SolAPI {
 
     static let shared = SolAPI()
     
-    func fetchSolList(router: Router, onCompletion: @escaping ([SolClass]) ->()) {
-        var solList = [SolClass]()
+    func fetchSolList(router: Router, onCompletion: @escaping ([Sol]) ->()) {
+        var solList = [Sol]()
         var components = URLComponents()
         components.scheme = router.scheme
         components.host = router.host
@@ -34,7 +34,7 @@ final class SolAPI {
                             let jsonData = try! JSONSerialization.data(withJSONObject: solJson)
                             let decoder = JSONDecoder()
                             decoder.dateDecodingStrategy = .iso8601
-                            let solObject = try! decoder.decode(SolClass.self, from: jsonData)
+                            let solObject = try! decoder.decode(Sol.self, from: jsonData)
                             solList.append(solObject)
                         }
                     }
