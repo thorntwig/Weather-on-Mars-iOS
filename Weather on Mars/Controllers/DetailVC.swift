@@ -75,12 +75,16 @@ class DetailVC: UIViewController {
         dataSets[0].colors = [UIColor(ciColor: .black)]
         dataSets[1].colors = [UIColor(ciColor: .red)]
         dataSets[2].colors = [UIColor(ciColor: .green)]
+        
+        for dataSet in dataSets {
+            dataSet.highlightEnabled = true
+            dataSet.highlightColor = UIColor(ciColor: .black)
+        }
         let data = LineChartData(dataSets: dataSets)
         self.lineChartView.data = data
-        if let indexPathRow = self.indexPathRow {
-            self.lineChartView.highlightValue(x: Double(indexPathRow),y: Double.nan, dataSetIndex: 0)
+        if let indexPathRowTest = self.indexPathRow {
+            self.lineChartView.highlightValue(x: Double(indexPathRowTest),y: Double.nan, dataSetIndex: 0)
         }
-        
     }
     
     func setupView() {

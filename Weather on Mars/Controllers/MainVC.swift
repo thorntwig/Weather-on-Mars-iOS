@@ -75,7 +75,7 @@ class MainVC: UIViewController {
         
     }
     
-//      MARK: functions
+//      MARK: Functions
       
     @objc func tap(_ sender:UITapGestureRecognizer) {
         let detailVC = DetailVC()
@@ -124,8 +124,6 @@ class MainVC: UIViewController {
                 views[typeInt].setData(measureData: " -- " + " -- ")
         }
     }
-
-        
 }
 //        MARK: - UITableViewDataSource
 
@@ -177,14 +175,10 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate {
         }
     }
 }
-
 // MARK: - String Extension
 
 extension StringProtocol {
     var firstUppercased: String {
         return prefix(1).uppercased() + dropFirst()
-    }
-    var firstCapitalized: String {
-        return prefix(1).capitalized + dropFirst()
     }
 }

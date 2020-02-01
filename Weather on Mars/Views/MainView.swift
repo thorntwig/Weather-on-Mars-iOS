@@ -10,10 +10,6 @@ import UIKit
 
 class MainView: UIView {
     
-    
-    let pressureView = InfoView(frame: CGRect.zero, type: InfoView.InfoType.pressure)
-    let windView = InfoView(frame: CGRect.zero, type: InfoView.InfoType.wind)
-
     required init?(coder: NSCoder) {
          fatalError("init(coder:) has not been implemented")
     }
@@ -23,6 +19,16 @@ class MainView: UIView {
         setupView()
         setupConstraints()
     }
+    
+//      MARK: - UI Elements
+    
+//      MARK: - Labels
+    
+    
+    
+    let pressureView = InfoView(frame: CGRect.zero, type: InfoView.InfoType.pressure)
+    let windView = InfoView(frame: CGRect.zero, type: InfoView.InfoType.wind)
+
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -43,7 +49,6 @@ class MainView: UIView {
         let detailInfoLable = UILabel()
         detailInfoLable.translatesAutoresizingMaskIntoConstraints = false
         detailInfoLable.textColor = .white
-    
         
         return detailInfoLable
     }()
@@ -163,7 +168,6 @@ class MainView: UIView {
         addSubview(placeLable)
         addSubview(tempLable)
         
-        
         tableView.register(SolCell.self, forCellReuseIdentifier: "cellid")
         tableView.backgroundColor = UIColor.groupTableViewBackground
         tableView.rowHeight = 45
@@ -171,9 +175,8 @@ class MainView: UIView {
         if #available(iOS 13.0, *) {
             backgroundColor = UIColor.systemBackground
         } else {
-            
+            backgroundColor = UIColor.white
         }
-        
     }
     
     func setupConstraints() {
@@ -225,7 +228,4 @@ class MainView: UIView {
             
             ])
     }
-    
-
-
 }
